@@ -1,0 +1,22 @@
+<div class="nlSelect"
+		data-ng-init="open = false"
+		data-ng-keydown="selectCtrl.keyDownHandler($event)" >
+	<a class="nlSelect-selected-value pointer" tabindex="{{tabIndex}}"
+		data-ng-click="openDropDown($event)"
+		>{{selectedValue.label}}</a>
+	<div class="nlSelect-options-container {{themeSelector}}" data-ng-class="{selecting : open}">
+		<div class="spacer"></div>
+		<div class="inputContainer" data-ng-if="autocompletable === 'true'">
+			<input data-ng-model="selectCtrl.selectFilter" type="text" 
+				data-ng-keydown="keyDownHandler($event)"
+				data-ng-change="handleFilterChange($event)"/>
+		</div>
+		<ul class="nlSelect-options">
+			<li data-ng-repeat="option in selectCtrl.selectOptions"
+				data-ng-click="select(option, $event)"
+				data-ng-class="{ 'selected' : option.selected }" class="pointer">
+				<span>{{option.label}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,135 @@
+@mixin nlForm(
+	$classThemeSelector : "default"
+	, $nlLightColor : #444040
+	, $nlDarkColor : #000
+	, $nlLightXlColor : #ccc
+	, $nlSearchBtnBackColor: #333
+) {
+	$nlFontSize : 2em;
+
+	nl-form div.#{$classThemeSelector} {
+		float: left; //fix per IE9
+		font-size: $nlFontSize;
+	    text-transform: none;
+		background-color: white;
+		color: #000000;
+		padding: 1em;
+	}
+	nl-form div.#{$classThemeSelector} div.nlButtonWrapper {
+		text-align: center !important;
+		margin-top: 1em; }
+	
+	nl-form div.#{$classThemeSelector} button {
+		color: #FFF;
+		cursor : pointer;
+		background-color: $nlSearchBtnBackColor;
+		border: medium none;
+		box-sizing: border-box;
+		font-size: 14px;
+		font-weight: normal;
+		padding: 0.5em 1em;
+		text-transform: uppercase;
+	}
+	nl-form div.#{$classThemeSelector} button#nl-form-btn-confirm {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	nl-form div.#{$classThemeSelector} .nlSelect {
+		display: inline;
+		position: relative;
+	}
+	nl-form div.#{$classThemeSelector} .nlSelect a.nlSelect-selected-value {
+		display: inline-block;
+		font-style: italic;
+		border-bottom: 1px dotted black;
+		padding-right: 5px;
+		color: $nlLightColor;
+		text-decoration: none;
+		&:hover {
+			cursor : pointer;
+			color: $nlDarkColor;
+		}
+	}
+
+	.#{$classThemeSelector}.nlSelect-options-container {
+		position:absolute;
+		z-index: 1;
+		max-height: 350px;
+		max-width: 450px;
+		min-width: 50px;
+		height:0; visibility: hidden; opacity: 0;
+	    font-size: $nlFontSize;
+	    transition: visibility 0s, opacity 0.4s ;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container > .inputContainer {
+		padding: 0.2em;
+		background-color: $nlDarkColor;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container input {
+		font-size: 1em;
+	    border-radius: 0.5em;
+	    padding-left: 0.5em;
+	    border: 0;
+	    outline: 0;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container.selecting {
+		height: auto; visibility: visible; opacity: 1;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container ul.nlSelect-options {
+		display: block;
+		overflow: auto;
+		max-height: 350px;
+		list-style-type : none;
+		padding: 0px;
+		margin: 0px;
+		position: relative;
+		width: auto;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container ul.nlSelect-options li {
+		padding: 3px 1em 3px 3px;
+		background-color: $nlDarkColor;
+		color:  $nlLightXlColor;
+		border-bottom: 1px dotted $nlLightColor;
+		border-left: 1px dotted $nlLightColor;
+		border-right: 1px dotted $nlLightColor;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container ul.nlSelect-options li:hover,
+	.#{$classThemeSelector}.nlSelect-options-container ul.nlSelect-options li:hover.selected {
+		background-color: $nlLightXlColor;
+		color:  $nlDarkColor;
+		cursor: pointer;
+	}
+	.#{$classThemeSelector}.nlSelect-options-container ul.nlSelect-options li.selected {
+		background-color: $nlLightColor;
+		color: $nlDarkColor;
+	}
+
+	nl-form div.#{$classThemeSelector} .nlText {
+		display: inline;
+		position: relative;
+	}
+	nl-form div.#{$classThemeSelector} .nlText a {
+		color: $nlLightColor;
+		border-bottom: 1px dotted black;
+		&:hover {
+			color: $nlDarkColor;
+			cursor: pointer;
+		}
+	}
+	nl-form div.#{$classThemeSelector} .nlText input {
+		color: $nlLightColor;
+		border: none;
+		border-bottom: 1px dotted black;
+		font-size: 1em;
+		
+		&:focus {
+			outline: none;
+			border-top: 1px dotted black;
+		}
+	}
+}
+
+@include nlForm("default");
+@include nlForm("test", red, orange, yellow);

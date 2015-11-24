@@ -1,0 +1,18 @@
+{
+  "name": "natural-language-form",
+  "description": "An unusual, elegant form that can built within a meaningful sentence where tokens translates into selectbox or inputfield",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "naturalform",
+    "form",
+    "elegant",
+    "form",
+    "themable"
+  ],
+  "authors": [
+    "Andrea Polito"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}

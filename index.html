@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/natural-language-form.css">
+	</head>
+	<body ng-app="ap-naturalLanguageForm" ng-controller="MainCtrl">
+		<div>{{search}}</div>
+		<nl-form theme-selector="test">
+			<span>I'm looking for a</span>
+			<nl-select ng-model="search.p1" theme-selector="test" autocompletable="true">
+				<nl-option value="val1">opt1</nl-option>
+				<nl-option>opt2</nl-option>
+				<nl-option>opt3</nl-option>
+				<nl-option>opt4</nl-option>
+				<nl-option>opt5</nl-option>
+				<nl-option>opt6</nl-option>
+				<nl-option>opt7</nl-option>
+				<nl-option>opt8</nl-option>
+				<nl-option>opt8</nl-option>
+				<nl-option>opt9</nl-option>
+			</nl-select>
+			<span>that could be found in</span>
+			<nl-text ng-model="search.p2" placeholder="here"></nl-text>
+			or in this places
+
+			<nl-select ng-model="search.p3" theme-selector="test" autocompletable="true">
+				<nl-option value="val1">opt1</nl-option>
+				<nl-option>optaaa2</nl-option>
+				<nl-option>opbbaa3</nl-option>
+				<nl-option>optccc4</nl-option>
+				<nl-option>opdddt5</nl-option>
+				<nl-option>opaaat6</nl-option>
+			</nl-select>
+		</nl-form>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="src/natural-language-form.js"></script>
+	</body>
+</htmlm

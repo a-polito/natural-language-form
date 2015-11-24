@@ -1,0 +1,4 @@
+<div class="nlText">
+	<a tabIndex="{{tabIndex}}" ng-show="!editing" ng-focus="ctrl.switchEditing(true)" ng-click="ctrl.switchEditing(true)">{{ngModel}}</a>
+	<input tabIndex="{{tabIndex}}" placeholder="{{placeHolder}}" ng-show="editing" type="text" ng-model="ngModel" ng-blur="ctrl.switchEditing(false)" data-ng-keydown="ctrl.handleKeyEvent($event)"/>
+</div>
