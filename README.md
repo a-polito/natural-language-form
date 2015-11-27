@@ -20,5 +20,9 @@ The canonical selectbox is replaced by nl-select. It offers capabilities like ke
 </nl-select>
 ```
 
-# nl-select
-The canonical selectbox is replaced by nl-select. It offers capabilities like keyboard navigation, autocompletion, multiselection, theming
+# nl-text
+The inputbox is replaced by nl-text. It offers another elegant way to show a label, which translates into a textbox by focusing it (also with keyboard navigation). A placeholder as the html input text attribute can be specified.
+
+```sh
+<nl-text ng-model="search.p2" placeholder="here"></nl-text>
+```
