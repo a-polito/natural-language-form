@@ -1,0 +1,30 @@
+{
+  "name": "natural-language-form",
+  "version": "1.0.0",
+  "description": "I was tired to see in every website the same old forms with same old labels with same old search fields, and after surfing the web I bumped myself into the beatiful works of Codrops (http://tympanus.net/codrops/) and their experimental implementation of a natural form language (https://github.com/codrops/NaturalLanguageForm). \r When we had the chance to freely make proposals on our project, we decided to get it into and reimplement the whole concept using AngularJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"live-server\" \"npm run compile-css\"",
+    "compile-css": "node-sass -w -o css css/scss/main.scss natural-form-language.css",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-polito/natural-language-form.git"
+  },
+  "author": "Andrea Polito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-polito/natural-language-form/issues"
+  },
+  "homepage": "https://github.com/a-polito/natural-language-form#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "concurrently": "^2.0.0",
+    "live-server": "^1.0.0",
+    "node-sass": "^3.7.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
